@@ -1,0 +1,122 @@
+[
+ {
+  "tourName": "예술랜드",
+  "tourIntro": "쉼, 그것조차 예술이 되는 곳",
+  "lat": 34.6953,
+  "lng": 127.7775,
+  "like": 5,
+  "imgLink": ".\/img\/예술랜드.jpg"
+ },
+ {
+  "tourName": "해양공원",
+  "tourIntro": "버스킹의 성지. 여수밤바다의 배경",
+  "lat": 34.7384,
+  "lng": 127.7449,
+  "like": 17,
+  "imgLink": ".\/img\/해양공원.jpg"
+ },
+ {
+  "tourName": "백야도",
+  "tourIntro": "여수의 끝, 순백의 섬",
+  "lat": 34.6204,
+  "lng": 127.6404,
+  "like": 7,
+  "imgLink": ".\/img\/백야도.jpg"
+ },
+ {
+  "tourName": "한우드림 동물체험장",
+  "tourIntro": "직접 만져보고 느끼는 동물의 세계",
+  "lat": 34.6691,
+  "lng": 127.7667,
+  "like": 3,
+  "imgLink": ".\/img\/동물체험장.jpg"
+ },
+ {
+  "tourName": "금오도 비렁길",
+  "tourIntro": "여수의 올레길. 벼랑과 푸른 바다",
+  "lat": 34.5156,
+  "lng": 127.7292,
+  "like": 14,
+  "imgLink": ".\/img\/비렁길.jpg"
+ },
+ {
+  "tourName": "섬달천",
+  "tourIntro": "손에 닿을듯한 나만의 작은 섬",
+  "lat": 34.7632,
+  "lng": 127.5658,
+  "like": 9,
+  "imgLink": ".\/img\/섬달천.jpg"
+ },
+ {
+  "tourName": "승월마을",
+  "tourIntro": "여수 봄 꽃으로 물들다",
+  "lat": 34.6377,
+  "lng": 127.7629,
+  "like": 33,
+  "imgLink": ".\/img\/승월마을.jpg"
+ },
+ {
+  "tourName": "자산공원",
+  "tourIntro": "케이블카에서 즐기는 단풍 스카이뷰",
+  "lat": 34.7391,
+  "lng": 127.7504,
+  "like": 8,
+  "imgLink": ".\/img\/자산공원.jpg"
+ },
+ {
+  "tourName": "청수당",
+  "tourIntro": "넓게 펼쳐진 여수바다가 대나무숲 사이로 보이는 청수당",
+  "lat": 34.7387,
+  "lng": 127.7402,
+  "like": 21,
+  "imgLink": ".\/img\/청수당.jpg"
+ },
+ {
+  "tourName": "테디베어 뮤지엄",
+  "tourIntro": "어느날 테디베어가 여수를 찾아왔다",
+  "lat": 34.7501,
+  "lng": 127.6418,
+  "like": 11,
+  "imgLink": ".\/img\/테디베어.jpg"
+ },
+ {
+  "tourName": "몽돌해수욕장",
+  "tourIntro": "안도의 끝. 모나지않은 아늑한 해변",
+  "lat": 34.4846,
+  "lng": 127.8064,
+  "like": 14,
+  "imgLink": ".\/img\/몽돌.jpg"
+ },
+ {
+  "tourName": "방죽포해수욕장",
+  "tourIntro": "돌산의 숲 속에 감춰진 조용한 해변",
+  "lat": 34.631,
+  "lng": 127.7926,
+  "like": 2,
+  "imgLink": ".\/img\/방죽포.jpg"
+ },
+ {
+  "tourName": "친수공원",
+  "tourIntro": "해안선을 따라 펼쳐진 복합근린공원",
+  "lat": 34.7475,
+  "lng": 127.6678,
+  "like": 12,
+  "imgLink": ".\/img\/친수공원.jpg"
+ },
+ {
+  "tourName": "아쿠아플라넷",
+  "tourIntro": "자연과 인간이 함께할 수 있는 공간을 향한 꿈의 항해",
+  "lat": 34.7468,
+  "lng": 127.7484,
+  "like": 29,
+  "imgLink": ".\/img\/아쿠아플라넷.jpg"
+ },
+ {
+  "tourName": "여수 국가산단전망대",
+  "tourIntro": "여수의 심장. 밤낮으로 쉬지않고 빛나는 화려한 야경",
+  "lat": 34.8012,
+  "lng": 127.6485,
+  "like": 10,
+  "imgLink": ".\/img\/산단전망대.jpg"
+ }
+]

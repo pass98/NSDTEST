@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        .swiper-slide {
+            text-align: center;
+        }
+
+        .swiper-slide img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        @font-face {
+            font-family: 'KCCChassam';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/KCCChassam.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        #spot-side {
+            font-family: KCCChassam
+        }
+
+        div#spot-animationwrap {
+
+            background-color: black;
+            flex-direction: column;
+
+
+        }
+
+        .content {
+            width: 500px;
+            color: white;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-end;
+            height: 100%;
+            width: 50%;
+        }
+
+        .content2 {
+            display: flex;
+            justify-content: center;
+
+        }
+
+        #spotSinemartic {
+            width: 500px;
+            height: 120px;
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+
+        }
+
+        div#spot-animationwrap video {
+
+            width: 100%;
+            /* 영상의 너비를 100%로 설정 */
+            height: 120px;
+            /* 영상의 높이를 자동으로 조정 */
+        }
+        .box {
+            width: 450px;
+            height: 100px;
+            line-height: 100px;
+            border-bottom: 1px solid;
+            border-color: rgb(199, 199, 199);
+            text-align: justify;
+            font-size: 20px;
+            cursor: pointer;
+            padding-left: 30px;
+           
+
+
+        }
+        .box:hover {
+            border: 1px solid;
+            border-color: black;
+            border-radius: 15px;
+            font-weight: bold;
+        }
+        .space {
+            width: 100px;
+            height: 405px;
+
+        }
+
+        #allContainer{
+            display: flex;
+            justify-content: center;
+            
+            width: 100%;
+            height: 500px;
+            background: rgb(252, 247, 240);
+        }
+
+        #conContainer{
+
+            width: 80%;
+            background-color: rgb(252, 247, 240);
+            align-content: center;
+            padding-top: 50px;
+
+        }
+        .top_conBox{
+            justify-content: center;
+            width: 100%;
+            height: 100px;
+            background-color: white;
+            font-size: 18px;
+            font-weight: bold;
+            line-height: 100px;
+            border-radius: 30px 30px 0px 0px;
+            
+            
+        }
+        .bottom_conBox{
+            display: flex;
+            justify-content: center;
+        }
+        .conBox{
+            width: 25%;
+            height: 350px;
+            padding-left: 40px;
+            padding-right: 20px;
+            background-color: white;
+            border-color: black'
+            
+        }
+        .menuBox{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        a{
+            display: inline-block;
+            font-size: 14px;
+            width: 100px;
+            height: 33px;
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        
+        }
+        #titleBox{
+            display: inline-block;
+            width: 170px;
+            height: 60px;
+            font-weight: bold;
+            font-size: 17px;
+            color: rgb(85, 85, 255);
+        }
+
+    </style>
+</head>
+
+<body>
+<div class="map_wrap">
+        <div class="contents">
+            <div class="map_title_wrap">
+                <h3>지도</h3>
+            </div>
+            <div class="content2">
+                <!-- 지도를 표시할 div 입니다 -->
+                <div id="map" style="width:45%;height:405px; border-radius: 10px;"></div>
+                <div class="space"></div>
+                <div id="box" border="1px solid"> <!--- 지도 옆 리스트 자리-->
+                    <div class="box" id="box1">전체 지도 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#여수의 모든 컨텐츠를 한눈에!</div>
+                    <div class="box" id="box2">관광지 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#여수의 모든 볼거리와 즐길거리!</div>
+                    <div class="box" id="box3">숙박 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#푸른 여수바다를 방안에서 즐기자! </div>
+                    <div class="box" id="box4">식당 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#여수의 진짜 맛집만을
+                        모아모아!</div>
+                </div>
+            </div>
+        </div>
+
+        <br><br>
+
+<div id="allContainer">
+    <div id="conContainer">
+        <div class="top_conBox">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;관광지 예약 바로가기
+        </div>
+        <div class="bottom_conBox">
+            <div class="conBox" style="border-right: 1px solid;">
+                <div class="menuBox">
+                    <a id="titleBox">볼거리</a><br><br>
+                    <a href="https://map.naver.com/v5/entry/place/1777903766?lng=127.77715999312976&lat=34.69503115307501&placePath=%2Fhome&entry=plt&c=15,0,0,0,dh" target="_blank">예술랜드</a>
+                    <a href="https://map.naver.com/v5/entry/place/17281236?lng=127.740402999613&lat=34.73708699971599&placePath=%2Fhome&entry=plt&c=15,0,0,0,dh" target="_blank">해양공원</a>
+                    <a href="https://map.naver.com/v5/entry/place/13491535?lng=127.6342375&lat=34.6157737&placePath=%2Fhome&entry=plt" target="_blank">백야도</a>
+                    <a href="https://map.naver.com/v5/entry/place/21259157?lng=127.7669925&lat=34.669238&placePath=%2Fhome&entry=plt" target="_blank">한우드림</a>
+                    <a href="https://map.naver.com/v5/search/%EC%97%AC%EC%88%98%20%EB%B9%84%EB%A0%81%EA%B8%B8/place/1169141022?placePath=%3Fentry=pll%26from=nx%26fromNxList=true&c=15,0,0,0,dh" target="_blank">비렁길</a>
+                    <a href="https://map.naver.com/v5/entry/place/17294473?lng=127.5659375&lat=34.7638583&placePath=%2Fhome&entry=plt" target="_blank">섬달천</a>
+                    <a href="https://map.naver.com/v5/entry/place/37787676?lng=127.7661609&lat=34.6374193&placePath=%2Fhome%3Fentry=plt&c=15,0,0,0,dh" target="_blank">승월마을</a>
+                    <a href="https://map.naver.com/v5/search/%EC%97%AC%EC%88%98%20%EC%9E%90%EC%82%B0%EA%B3%B5%EC%9B%90/place/37609918?placePath=%3Fentry=pll%26from=nx%26fromNxList=true" target="_blank">자산공원</a>
+                    <a href="https://map.naver.com/v5/search/%EC%97%AC%EC%88%98%20%EC%B2%AD%EC%88%98%EB%8B%B9/place/1280412899?placePath=%3Fentry=pll%26from=nx%26fromNxList=true" target="_blank">청수당</a>
+                    <a href="https://map.naver.com/v5/entry/place/1546969352?lng=127.64064816955201&lat=34.74891475664341&placePath=%2Fhome&entry=plt" target="_blank">테디베어</a>
+                    <a href="https://map.naver.com/v5/entry/place/13491144?lng=127.807673&lat=34.482846&placePath=%2Fhome&entry=plt" target="_blank">몽돌해수욕장</a>
+                    <a href="https://map.naver.com/v5/search/%EC%97%AC%EC%88%98%20%EB%B0%A9%EC%A3%BD%ED%8F%AC%ED%95%B4%EC%88%98%EC%9A%95%EC%9E%A5/place/13491724?placePath=%3Fentry%3Dpll%26from%3Dnx%26fromNxList%3Dtrue&placeSearchOption=entry%3Dpll%26fromNxList%3Dtrue" target="_blank">방죽포</a>
+                    <a href="https://map.naver.com/v5/search/%EC%97%AC%EC%88%98%20%EC%B9%9C%EC%88%98%EA%B3%B5%EC%9B%90/place/19912822?placePath=%3Fentry%3Dpll%26from%3Dnx%26fromNxList%3Dtrue&placeSearchOption=entry%3Dpll%26fromNxList%3Dtrue" target="_blank">친수공원</a>
+                    <a href="https://map.naver.com/v5/entry/place/21529770?lng=127.7488766&lat=34.7462427&placePath=%2Fhome&entry=plt" target="_blank">아쿠아플라넷</a>
+                    <a href="https://map.naver.com/v5/entry/place/17290313?lng=127.64841250035602&lat=34.800816702100995&placePath=%2Fhome&entry=plt&c=15,0,0,0,dh" target="_blank">산단전망대</a>
+                </div>
+            </div>
+            <div class="conBox" style="border-right: 1px solid;">
+                <div class="menuBox">
+                    <a id="titleBox">액티비티</a><br><br>
+                    <a href="https://search.naver.com/search.naver?sm=tab_hty.top&where=nexearch&query=%ED%8E%98%EA%B0%80%EC%86%8C%EC%8A%A4+%EC%9A%94%ED%8A%B8%ED%88%AC%EC%96%B4&oquery=%EC%97%AC%EC%88%98+%EC%9A%94%ED%8A%B8&tqi=i5YNylp0YidssFc3hnlssssst%2Bl-384146#" target="_blank">요트체험</a>
+                    <a href="https://map.naver.com/v5/entry/place/1667479482?lng=127.7482804&lat=34.7170096&placePath=%2Fhome&entry=plt" target="_blank">짚트랙</a>
+                    <a href="https://map.naver.com/v5/entry/place/21658569?lng=127.747255499895&lat=34.77200260182361&placePath=%2Fhome&entry=plt" target="_blank">레일바이크</a>
+                    <a href="https://map.naver.com/v5/search/%EC%97%AC%EC%88%98%20%EB%A3%A8%EC%A7%80%ED%8C%8C%ED%81%AC/place/1615094405?placePath=%3Fentry%3Dpll%26from%3Dnx%26fromNxList%3Dtrue&placeSearchOption=entry%3Dpll%26fromNxList%3Dtrue" target="_blank">루지파크</a>
+                    <a href="http://www.alr.co.kr/art.html?num=01" target="_blank">고카트</a>
+                    <a href="http://laterrace-resort.com/" target="_blank">라테라스</a>
+                    <a href="https://www.google.com/maps/place/34%C2%B044'13.9%22N+127%C2%B044'34.1%22E/data=!3m1!4b1!4m4!3m3!8m2!3d34.7372!4d127.7428?hl=ko&entry=ttu" target="_blank">돌문어</a>
+                    <a href="https://www.google.com/maps/place/34%C2%B029'22.2%22N+127%C2%B048'50.0%22E/data=!3m1!4b1!4m4!3m3!8m2!3d34.4895!4d127.8139?hl=ko&entry=ttu" target="_blank">갯바위낚시</a>
+                </div>
+            </div>
+            <div class="conBox" style="border-right: 1px solid;">
+                <div class="menuBox">
+                    <a id="titleBox">맛집</a><br><br>
+                    <a href="https://map.naver.com/v5/entry/place/11726049?lng=127.7452518&lat=34.7390599&placePath=%2Fhome&entry=plt" target="_blank">삼학집</a>
+                    <a href="https://map.naver.com/v5/entry/place/19568733?lng=127.61335720198&lat=34.70693902372919&placePath=%2Fhome&entry=plt" target="_blank">나진국밥</a>
+                    <a href="https://map.naver.com/v5/entry/place/1387295126?lng=127.6722&lat=34.7426227&placePath=%2Fhome&entry=plt" target="_blank">펍앤다이닝</a>
+                    <a href="https://map.naver.com/v5/entry/place/1244348771?lng=127.708766&lat=34.5377326&placePath=%2Fhome&entry=plt" target="_blank">시나브로</a>
+                    <a href="https://map.naver.com/v5/entry/place/11720135?lng=127.73205809999999&lat=34.7387761&placePath=%2Fhome&entry=plt" target="_blank">구백식당</a>
+                    <a href="https://map.naver.com/v5/entry/place/11721646?lng=127.7306876&lat=34.73912&placePath=%2Fhome&entry=plt" target="_blank">칠공주장어</a>
+                    <a href="https://map.naver.com/v5/entry/place/16864591?lng=127.736546&lat=34.740136&placePath=%2Fhome&entry=plt" target="_blank">함남면옥</a>
+                    <a href="https://map.naver.com/v5/search/%EC%97%AC%EC%88%98%20%EC%9A%A9%EA%B6%81%ED%9A%9F%EC%A7%91/place/19824185?placePath=%3Fentry%3Dpll%26from%3Dnx%26fromNxList%3Dtrue&placeSearchOption=entry%3Dpll%26fromNxList%3Dtrue" target="_blank">용궁횟집</a>
+                    <a href="https://map.naver.com/v5/search/%EC%97%AC%EC%88%98%20%EA%B1%B0%EB%AC%B8%EB%8F%84%EB%A7%88%EC%B0%A8/place/16907661?placePath=%3Fentry%3Dpll%26from%3Dnx%26fromNxList%3Dtrue&placeSearchOption=entry%3Dpll%26fromNxList%3Dtrue" target="_blank">거문도마차</a>
+                    <a href="https://map.naver.com/v5/entry/place/1711914459?lng=127.6721437&lat=34.7431252&placePath=%2Fhome&entry=plt" target="_blank">해달별담</a>
+                </div>
+            </div>
+            <div class="conBox">
+                <div class="menuBox">
+                    <a id="titleBox">숙소</a><br><br>
+                    <a href="https://www.hiddenbay.co.kr/">히든베이</a>
+                    <a href="https://map.naver.com/v5/entry/place/1124722923?lng=127.5695412&lat=34.6507909&placePath=%2Fhome&entry=plt" target="_blank">노을과낭만</a>
+                    <a href="https://map.naver.com/v5/entry/place/1565855754?lng=127.6356625&lat=34.6235412&placePath=%2Fhome&entry=plt" target="_blank">시로</a>
+                    <a href="https://map.naver.com/v5/entry/place/35317048?lng=127.783692&lat=34.6704903&placePath=%2Fhome&entry=plt" target="_blank">여수밤바다</a>
+                    <a href="https://map.naver.com/v5/entry/place/1737546878?lng=127.7452638&lat=34.7391019&placePath=%2Fhome&entry=plt" target="_blank">삼학1947</a>
+                    <a href="https://map.naver.com/v5/entry/place/38278728?lng=127.73700460005401&lat=34.731201300356&placePath=%2Fhome&entry=plt" target="_blank">장군도펜션</a>
+                    <a href="https://map.naver.com/v5/search/%EC%97%AC%EC%88%98%20%EA%B8%88%EC%98%A4%EB%8F%84%EC%BA%A0%ED%95%91%EC%9E%A5/place/38576010?lng=127.7613169&lat=34.5351626&placePath=%3FbusinessCategory%3Dcamping%26entry%3Dpll%26from%3Dnx%26fromNxList%3Dtrue%26query%3D%EC%97%AC%EC%88%98%20%EA%B8%88%EC%98%A4%EB%8F%84%EC%BA%A0%ED%95%91%EC%9E%A5&placeSearchOption=businessCategory%3Dcamping%26entry%3Dpll%26fromNxList%3Dtrue%26query%3D%EC%97%AC%EC%88%98%20%EA%B8%88%EC%98%A4%EB%8F%84%EC%BA%A0%ED%95%91%EC%9E%A5" target="_blank">금오도캠핑</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+
+        <!-- 지도 스크립트 -->
+        <script src="./jquery-3.7.0.js"></script>
+
+        <script type="text/javascript"
+            src="//dapi.kakao.com/v2/maps/sdk.js?appkey=07117a86036e95442b51322a9f119816"></script>
+        <script>
+            var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+                mapOption = {
+                    center: new kakao.maps.LatLng(34.62, 127.6623), // 지도의 중심좌표
+                    level: 10 // 지도의 확대 레벨
+                };
+            // 지도를 표시할 div와  지도 옵션으로  지도를 생성합니다
+            var map = new kakao.maps.Map(mapContainer, mapOption); 
+        </script>
+
+        <!-- 버튼 스크립트 -->
+        <script>
+        let blueStar = "./marKerBlueStar.png"
+        let greenStar = "./marKerGreenStar.png"
+        let redStar = "./marKerRedStar.png"
+
+            box1.addEventListener('click', () => {
+                // 마커를 표시할 위치와 title 객체 배열입니다 
+                var positions = [];
+
+                // 마커 이미지의 이미지 주소입니다
+
+                const makeMap = (lat, lng, lv) => {
+                    var mapContainer = document.getElementById('map'), // 지도를 표시할 div  
+                        mapOption = {
+                            center: new kakao.maps.LatLng(lat, lng), // 지도의 중심좌표
+                            level: lv// 지도의 확대 레벨
+                        };
+
+                    var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+                    var imageSrc = "https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/markerStar.png";
+
+                    for (var i = 0; i < positions.length; i++) {
+
+                        // 마커 이미지의 이미지 크기 입니다
+                        var imageSize = new kakao.maps.Size(24, 35);
+
+                        // 마커 이미지를 생성합니다    
+                        var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize);
+
+                        // 마커를 생성합니다
+                        var marker = new kakao.maps.Marker({
+                            map: map, // 마커를 표시할 지도
+                            position: positions[i].latlng, // 마커를 표시할 위치
+                            title: positions[i].title, // 마커의 타이틀, 마커에 마우스를 올리면 타이틀이 표시됩니다
+                            image: markerImage // 마커 이미지 
+                            
+                        });
+                    }
+
+                }
+
+
+
+
+                //json파일 내부주소로 하기
+                let tourAPI_URL = './숙소.json'
+                let tourAPI_URL2 = './관광지.json'
+                let tourAPI_URL3 = './식당.json'
+                let tourAPI_URL4 = './액티비티.json'
+
+
+                $.ajax({
+                    url: tourAPI_URL2,
+                    // 응답이 왔을 때 처리할 함수
+                    success: (result) => {
+
+                        console.log('result', result)
+
+                        // 데이터 안에 포함되어있는 83개의 데이터를 positionsㅇ라는 배열에 추가
+                        //tourDestNm lat lng
+                        for (let i = 0; i < result.length; i++) {
+                            // console.log(result.TourDestBaseInfo[i].tourDestNm, result.TourDestBaseInfo[i].lat,
+                            //     result.TourDestBaseInfo[i].lng)
+                            positions.push({
+                                title: result[i].tourName,
+                                latlng: new kakao.maps.LatLng(result[i].lat, result[i].lng)
+                            })
+                        }
+                        console.log('position', positions)
+                        makeMap(34.62, 127.6623, 10)
+
+                    }
+
+                }
+                )
+
+                $.ajax({
+                    url: tourAPI_URL,
+                    // 응답이 왔을 때 처리할 함수
+                    success: (result) => {
+
+                        console.log('result', result)
+
+                        // 데이터 안에 포함되어있는 83개의 데이터를 positionsㅇ라는 배열에 추가
+                        //tourDestNm lat lng
+                        for (let i = 0; i < result.length; i++) {
+                            // console.log(result.TourDestBaseInfo[i].tourDestNm, result.TourDestBaseInfo[i].lat,
+                            //     result.TourDestBaseInfo[i].lng)
+                            positions.push({
+                                title: result[i].accName,
+                                latlng: new kakao.maps.LatLng(result[i].lat, result[i].lng)
+                            })
+                        }
+                        console.log('position', positions)
+                        makeMap(34.62, 127.6623, 10)
+
+                    }
+
+                }
+                )
+
+                $.ajax({
+                    url: tourAPI_URL3,
+                    // 응답이 왔을 때 처리할 함수
+                    success: (result) => {
+
+                        console.log('result', result)
+
+                        // 데이터 안에 포함되어있는 83개의 데이터를 positionsㅇ라는 배열에 추가
+                        //tourDestNm lat lng
+                        for (let i = 0; i < result.length; i++) {
+                            // console.log(result.TourDestBaseInfo[i].tourDestNm, result.TourDestBaseInfo[i].lat,
+                            //     result.TourDestBaseInfo[i].lng)
+                            positions.push({
+                                title: result[i].resName,
+                                latlng: new kakao.maps.LatLng(result[i].lat, result[i].lng)
+                            })
+                        }
+                        console.log('position', positions)
+                        makeMap(34.62, 127.6623, 10)
+                    }
+
+                }
+                )
+                $.ajax({
+                    url: tourAPI_URL4,
+                    // 응답이 왔을 때 처리할 함수
+                    success: (result) => {
+
+                        console.log('result', result)
+
+                        // 데이터 안에 포함되어있는 83개의 데이터를 positionsㅇ라는 배열에 추가
+                        //tourDestNm lat lng
+                        for (let i = 0; i < result.length; i++) {
+                            // console.log(result.TourDestBaseInfo[i].tourDestNm, result.TourDestBaseInfo[i].lat,
+                            //     result.TourDestBaseInfo[i].lng)
+                            positions.push({
+                                title: result[i].actName,
+                                latlng: new kakao.maps.LatLng(result[i].lat, result[i].lng)
+                            })
+                        }
+                        console.log('position', positions)
+                        makeMap(34.62, 127.6623, 10)
+                    }
+
+                }
+                )
+
+            })
+
+            box2.addEventListener('click', () => {
+                // 마커를 표시할 위치와 title 객체 배열입니다 
+        var positions = [];
+
+// 마커 이미지의 이미지 주소입니다
+
+const makeMap = (lat, lng, lv) => {
+    var mapContainer = document.getElementById('map'), // 지도를 표시할 div  
+        mapOption = {
+            center: new kakao.maps.LatLng(lat, lng), // 지도의 중심좌표
+            level: lv// 지도의 확대 레벨
+        };
+
+    var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+    var imageSrc = greenStar;
+
+    for (var i = 0; i < positions.length; i++) {
+
+        // 마커 이미지의 이미지 크기 입니다
+        var imageSize = new kakao.maps.Size(24, 35);
+
+        // 마커 이미지를 생성합니다    
+        var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize);
+
+        // 마커를 생성합니다
+        var marker = new kakao.maps.Marker({
+            map: map, // 마커를 표시할 지도
+            position: positions[i].latlng, // 마커를 표시할 위치
+            title: positions[i].title, // 마커의 타이틀, 마커에 마우스를 올리면 타이틀이 표시됩니다
+            image: markerImage // 마커 이미지 
+        });
+    }
+
+}
+
+
+
+//숙소 식당 관광+액티비티
+//json파일 내부주소로 하기
+let tourAPI_URL = './숙소.json'
+let tourAPI_URL2 = './관광지.json'
+let tourAPI_URL3 = './식당.json'
+let tourAPI_URL4 = './액티비티.json'
+$.ajax({
+    url: tourAPI_URL2,
+    // 응답이 왔을 때 처리할 함수
+    success: (result) => {
+
+        // console.log('result', result)
+
+        // 데이터 안에 포함되어있는 83개의 데이터를 positionsㅇ라는 배열에 추가
+        //tourDestNm lat lng
+        for (let i = 0; i < result.length; i++) {
+            // console.log(result.TourDestBaseInfo[i].tourDestNm, result.TourDestBaseInfo[i].lat,
+            //     result.TourDestBaseInfo[i].lng)
+            positions.push({
+                title: result[i].tourName,
+                latlng: new kakao.maps.LatLng(result[i].lat, result[i].lng)
+            })
+        }
+        //console.log('position', positions)
+        makeMap(34.62, 127.6623, 10)
+
+    }
+
+}
+)
+$.ajax({
+    url: tourAPI_URL4,
+    // 응답이 왔을 때 처리할 함수
+    success: (result) => {
+
+        //console.log('result', result)
+
+        // 데이터 안에 포함되어있는 83개의 데이터를 positionsㅇ라는 배열에 추가
+        //tourDestNm lat lng
+        for (let i = 0; i < result.length; i++) {
+            // console.log(result.TourDestBaseInfo[i].tourDestNm, result.TourDestBaseInfo[i].lat,
+            //     result.TourDestBaseInfo[i].lng)
+            positions.push({
+                title: result[i].actName,
+                latlng: new kakao.maps.LatLng(result[i].lat, result[i].lng)
+            })
+        }
+        //console.log('position', positions)
+        makeMap(34.62, 127.6623, 10)
+    }
+
+}
+)
+            })
+                
+
+            box3.addEventListener('click', () => {
+                var positions = [];
+
+        // 마커 이미지의 이미지 주소입니다
+
+        const makeMap = (lat, lng, lv) => {
+            var mapContainer = document.getElementById('map'), // 지도를 표시할 div  
+                mapOption = {
+                    center: new kakao.maps.LatLng(lat, lng), // 지도의 중심좌표
+                    level: lv// 지도의 확대 레벨
+                };
+
+            var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+            var imageSrc = blueStar;
+
+            for (var i = 0; i < positions.length; i++) {
+
+                // 마커 이미지의 이미지 크기 입니다
+                var imageSize = new kakao.maps.Size(24, 35);
+
+                // 마커 이미지를 생성합니다    
+                var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize);
+
+                // 마커를 생성합니다
+                var marker = new kakao.maps.Marker({
+                    map: map, // 마커를 표시할 지도
+                    position: positions[i].latlng, // 마커를 표시할 위치
+                    title: positions[i].title, // 마커의 타이틀, 마커에 마우스를 올리면 타이틀이 표시됩니다
+                    image: markerImage // 마커 이미지 
+                });
+            }
+
+        }
+
+
+
+        //숙소 식당 관광+액티비티
+        //json파일 내부주소로 하기
+        let tourAPI_URL = './숙소.json'
+        let tourAPI_URL2 = './관광지.json'
+        let tourAPI_URL3 = './식당.json'
+        let tourAPI_URL4 = './액티비티.json'
+//숙소
+        $.ajax({
+            url: tourAPI_URL,
+            // 응답이 왔을 때 처리할 함수
+            success: (result) => {
+
+                //console.log('result', result)
+
+                // 데이터 안에 포함되어있는 83개의 데이터를 positionsㅇ라는 배열에 추가
+                //tourDestNm lat lng
+                for (let i = 0; i < result.length; i++) {
+                    // console.log(result.TourDestBaseInfo[i].tourDestNm, result.TourDestBaseInfo[i].lat,
+                    //     result.TourDestBaseInfo[i].lng)
+                    positions.push({
+                        title: result[i].accName,
+                        latlng: new kakao.maps.LatLng(result[i].lat, result[i].lng)
+                    })
+                }
+                //console.log('position', positions)
+                makeMap(34.65, 127.6623, 9)
+
+            }
+
+        }
+        )
+
+            })
+
+            box4.addEventListener('click', () => {
+
+                // 마커를 표시할 위치와 title 객체 배열입니다 
+        var positions = [];
+
+// 마커 이미지의 이미지 주소입니다
+
+const makeMap = (lat, lng, lv) => {
+    var mapContainer = document.getElementById('map'), // 지도를 표시할 div  
+        mapOption = {
+            center: new kakao.maps.LatLng(lat, lng), // 지도의 중심좌표
+            level: lv// 지도의 확대 레벨
+        };
+
+    var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+    var imageSrc = redStar;
+
+    for (var i = 0; i < positions.length; i++) {
+
+        // 마커 이미지의 이미지 크기 입니다
+        var imageSize = new kakao.maps.Size(24, 35);
+
+        // 마커 이미지를 생성합니다    
+        var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize);
+
+        // 마커를 생성합니다
+        var marker = new kakao.maps.Marker({
+            map: map, // 마커를 표시할 지도
+            position: positions[i].latlng, // 마커를 표시할 위치
+            title: positions[i].title, // 마커의 타이틀, 마커에 마우스를 올리면 타이틀이 표시됩니다
+            image: markerImage // 마커 이미지 
+        });
+    }
+
+}
+
+
+
+//숙소 식당 관광+액티비티
+//json파일 내부주소로 하기
+
+let tourAPI_URL = './숙소.json'
+let tourAPI_URL2 = './관광지.json'
+let tourAPI_URL3 = './식당.json'
+let tourAPI_URL4 = './액티비티.json'
+
+// 식당
+$.ajax({
+    url: tourAPI_URL3,
+    // 응답이 왔을 때 처리할 함수
+    success: (result) => {
+
+        // console.log('result', result)
+
+        // 데이터 안에 포함되어있는 83개의 데이터를 positionsㅇ라는 배열에 추가
+        //tourDestNm lat lng
+        for (let i = 0; i < result.length; i++) {
+            // console.log(result.TourDestBaseInfo[i].tourDestNm, result.TourDestBaseInfo[i].lat,
+            //     result.TourDestBaseInfo[i].lng)
+            positions.push({
+                title: result[i].resName,
+                latlng: new kakao.maps.LatLng(result[i].lat, result[i].lng)
+            })
+        }
+        // console.log('position', positions)
+        makeMap(34.65, 127.6623, 9)
+    }
+
+}
+)
+                
+ })
+
+
+
+
+
+        </script>
+    </div>
+    </div>
+
+</body>
+
+</html>
